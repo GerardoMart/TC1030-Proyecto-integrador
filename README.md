@@ -1,7 +1,7 @@
 # TC1030 Proyecto Integrador - Gerardo Martínez Carbajal A01713474
 
 Ya que el actual presidente del FC Barcelona está de vacaciones, ahora **tú eres el encargado de gestionar y manejar al equipo**, con sus limitantes, claro:  
-no puedes despedir ni contratar a ningún jugador nuevo, pero **sí puedes aumentar sueldos, contratar directores técnicos y visualizar el rendimiento de los jugares**
+no puedes despedir ni contratar a ningún jugador nuevo, pero **sí puedes aumentar sueldos, contratar directores técnicos y visualizar el rendimiento de los jugadores**
 para el reporte que después le tendrás que entregar al presidente.
 
 Tú te harás responsable de dichas gestiones mediante la información general que se te proporciona a través de clases.
