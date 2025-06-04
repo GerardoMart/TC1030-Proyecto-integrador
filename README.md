@@ -10,14 +10,14 @@ Tú te harás responsable de dichas gestiones mediante la información general q
 
 ##  Funcionalidad de las Clases
 
-### 1. `Barcelona`
+### `Barcelona`
 
 Gestiona los datos generales del club, incluyendo información histórica (como año de fundación y estadio) y detalles de la temporada actual (partidos jugados, goles, director técnico).  
 Genera métodos para visualizar estos datos y realizar modificaciones, como cambiar al entrenador.
 
 ---
 
-### 2. `Jugadores` (Clase Base)
+### `Jugadores` (Clase Base)
 
 Representa las características básicas de cualquier jugador del equipo, como:
 
