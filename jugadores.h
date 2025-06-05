@@ -25,7 +25,7 @@ public:
     virtual void aumentar_sueldo(int porcentaje);
     virtual void renovar_contrato();
     virtual void cambiar_posicion();
-    virtual void mostrarInfoJugador() const;
+    virtual void mostrarInfoJugador() const = 0;
 
     void setNombre(string nomb);
 };
@@ -98,16 +98,6 @@ void Jugadores::cambiar_posicion() {
     } else {
         cout << "La posición se mantuvo igual." << endl;
     }
-}
-
-void Jugadores::mostrarInfoJugador() const {
-    cout << "\nNombre: " << nombre << endl;
-    cout << "Tipo: " << tipo << endl;
-    cout << "Posición: " << posicion << endl;
-    cout << "Dorsal: " << dorsal << endl;
-    cout << "Pierna Hábil: " << pierna_habil << endl;
-    cout << "Sueldo Mensual: €" << sueldo_mensual << endl;
-    cout << "Duración del Contrato: " << duracion_contrato_meses << " meses" << endl;
 }
 
 void Jugadores::setNombre(string nomb) {
