@@ -1,6 +1,7 @@
 #ifndef BANCA_H
 #define BANCA_H
 
+#include "jugadores.h"
 #include <iostream>
 #include <string>
 #include <cctype> 
@@ -18,7 +19,7 @@ public:
           string nombre, string tipo, string posicion, int dorsal, string pierna_habil, 
           float sueldo, int contrato);
 
-    virtual void mostrarInfoJugador() const override;
+    void mostrarInfoJugador() const override;
 
     void entrenar(int tiempo_horas);
     void ingresar_partido(int minutos);
@@ -26,16 +27,23 @@ public:
     bool disponible_para_titular() const;
 };
 
-Banca::Banca(int minutos, int entrenamientos, int partidos, float rendimiento,
-             string nombre, string tipo, string posicion, int dorsal, string pierna_habil,
-             float sueldo, int contrato)
+Banca::Banca(int minutos, int entrenamientos, int partidos, float rendimiento,string nombre, 
+            string tipo, string posicion, int dorsal, string pierna_habil, float sueldo, int contrato)
     : Jugadores(nombre, tipo, posicion, dorsal, pierna_habil, sueldo, contrato),
       minutos_jugados(minutos), horas_entrenadas(entrenamientos),
       partidos_ingresado(partidos), rendimiento_entrenamiento(rendimiento) {}
 
 void Banca::mostrarInfoJugador() const {
-    Jugadores::mostrarInfoJugador();
-    cout << "=== DATOS BANCA ===" << endl;
+    cout << "\n=== INFORMACIÓN DEL JUGADOR DE BANCA ===" << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Tipo: " << tipo << endl;
+    cout << "Posición: " << posicion << endl;
+    cout << "Dorsal: " << dorsal << endl;
+    cout << "Pierna hábil: " << pierna_habil << endl;
+    cout << "Sueldo mensual: €" << sueldo_mensual << endl;
+    cout << "Duración del contrato: " << duracion_contrato_meses << " meses" << endl;
+
+    cout << "\n=== ESTADÍSTICAS DE BANCA ===" << endl;
     cout << "Minutos jugados: " << minutos_jugados << endl;
     cout << "Horas entrenadas: " << horas_entrenadas << endl;
     cout << "Partidos ingresados: " << partidos_ingresado << endl;
