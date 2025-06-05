@@ -1,6 +1,7 @@
 #ifndef CANTERA_H
 #define CANTERA_H
 
+#include "jugadores.h"
 #include <iostream>
 #include <string>
 #include <cctype> 
@@ -18,7 +19,7 @@ public:
             string nombre, string tipo, string posicion, int dorsal, string pierna_habil, 
             float sueldo, int contrato);
 
-    virtual void mostrarInfoJugador() const override;
+    void mostrarInfoJugador() const override;
 
     void entrenar();
     void ascender_categoria();
@@ -26,20 +27,28 @@ public:
     bool elegible_para_ascenso() const;
 };
 
-Cantera::Cantera(int edaD, string catego, int entrenamiento, float poten,
-                 string nombre, string tipo, string posicion, int dorsal, string pierna_habil,
-                 float sueldo, int contrato)
+Cantera::Cantera(int edaD, string catego, int entrenamiento, float poten, string nombre, 
+                string tipo, string posicion, int dorsal, string pierna_habil, float sueldo, int contrato)
     : Jugadores(nombre, tipo, posicion, dorsal, pierna_habil, sueldo, contrato),
       edad(edaD), categoria(catego), 
       entrenamientos_realizados(entrenamiento), potencial(poten) {}
 
+
 void Cantera::mostrarInfoJugador() const {
-    Jugadores::mostrarInfoJugador();
-    cout << "=== DATOS CANTERA ===" << endl;
+    cout << "\n=== INFORMACIÓN DEL JUGADOR DE CANTERA ===" << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Tipo: " << tipo << endl;
+    cout << "Posición: " << posicion << endl;
+    cout << "Dorsal: " << dorsal << endl;
+    cout << "Pierna hábil: " << pierna_habil << endl;
+    cout << "Sueldo mensual: €" << sueldo_mensual << endl;
+    cout << "Duración del contrato: " << duracion_contrato_meses << " meses" << endl;
+
+    cout << "\n=== ESTADÍSTICAS DE CANTERA ===" << endl;
     cout << "Edad: " << edad << " años" << endl;
     cout << "Categoría: " << categoria << endl;
     cout << "Entrenamientos realizados: " << entrenamientos_realizados << endl;
-    cout << "Potencial: " << potencial << "/10" << endl;
+    cout << "Potencial actual: " << potencial << "/10" << endl;
     cout << "Potencial calculado: " << calcular_potencial() << endl;
     cout << "Elegible para ascenso: " << (elegible_para_ascenso() ? "Sí" : "No") << endl;
 }
