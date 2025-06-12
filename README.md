@@ -84,6 +84,12 @@ g++ main.cpp  -o (nombre del ejecutable a elección libre)
 
 ---
 
+## Comentario
+
+Para finalizar el programa, seleccione la opción "salir" del menú principal del código.
+
+---
+
 ##  Autor
 
 - Gerardo Martínez Carbajal A01713474
