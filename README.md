@@ -78,7 +78,9 @@ si una función externa modifica directamente Jugadores::nombre (por error a la 
 
 ## ¿Cómo compilarlo?
 
-g++ main.cpp barcelona.cpp jugadores.cpp titulares.cpp banca.cpp cantera.cpp -o (nombre del ejecutable a elección libre)
+Se requieren descargar todos los archivos .h (las clases del programa) que están en repositorio junto con el archivo llamado "main.cpp", una vez descargados, podemos compilar de la siguiente manera:
+
+g++ main.cpp  -o (nombre del ejecutable a elección libre)
 
 ---
 
