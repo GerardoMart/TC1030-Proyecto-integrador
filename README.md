@@ -74,6 +74,14 @@ Este proyecto puede fallar si es que:
 - No tenemos en consideración su estructura base a la hora de modificar el código, ya sea por ejemplo
 si una función externa modifica directamente Jugadores::nombre (por error a la hora de encapsular).
 
+---
+
+## ¿Cómo compilarlo?
+
+g++ main.cpp barcelona.cpp jugadores.cpp titulares.cpp banca.cpp cantera.cpp -o (nombre del ejecutable a elección libre)
+
+---
+
 ##  Autor
 
 - Gerardo Martínez Carbajal A01713474
